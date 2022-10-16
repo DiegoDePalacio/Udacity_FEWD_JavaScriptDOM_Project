@@ -1,37 +1,40 @@
-# Front End Nanodegree Program
+# Front End Nanodegree Landing Page Project
 
-Front End Nanodegree Content & Project Resources
+Project created as part of the Nanodegree by Diego de Palacio
 
-## Table of Contents
+## Table of Content
 
-* [Projects](#projects)
-* [Courses](#courses)
-* [Style-Guide](#style-guide)
+* [Project Summary](#project-summary)
+* [Functionality](#functionality)
+* [Learnings](#learnings)
 
-## Projects
+## Project
 
-The following is a list of current projects required to complete the Front End Nanodegree.
+This project aims to give you real-world scenarios of manipulating the DOM. The functionality you will be using serves two purposes: to prepare you for appending dynamically added data to the DOM, and to show you how javascript can improve the usability of an otherwise static site. This project barely touches the surface of what is possible, but it does use some incredibly common events, methods, and logic.
 
-Note that projects that do not include associated starter code are not linked here.
+For this project, refactor and test as much as possible while you are building. You should figure for every piece of functionality you add, you will likely spend just as much time testing and refactoring your code. If it takes you 3 hours to figure out the logic, it should likely take you another 3 hours determining that you wrote the best code possible. As your skills improve, this process will feel more natural. Make sure to remove any debugging code from your final submission.
 
-1. Personal Blog Website
-2. [Landing Page](https://github.com/udacity/fend/tree/refresh-2019/projects/landing-page)
-3. [Weather Journal App](https://github.com/udacity/fend/tree/refresh-2019/projects/weather-journal-app)
-4. [Evaluate A News Article with Natural Language Processing](https://github.com/udacity/fend/tree/refresh-2019/projects/evaluate-news-nlp)
-5. Capstone - Travel App
+## Functionality
 
-## Courses
+You will be building a multi-section landing page. Often times, we don’t know how much content will be added to a page through a CMS or an API. To circumvent this problem, we can dynamically add the content to the page. We will be demonstrating this with the navigation menu. Additionally, dynamically building the navigation is a great precursor to understanding the virtual DOM which you will experience when you begin working with JavaScript frameworks.
 
-The following is a list of the courses associated with the Front End Nanodegree.
+To improve the user experience, the section actively being viewed should be differentiated in some way. Additionally, when a user clicks on a navigation item, the item should scroll you to the appropriate section rather than giving you the default jump.
 
-* C1 - CSS, Website Layout, Website Components
-* C2 - JavaScript & The DOM
-* C3 - Web API's and Asynchronous Applications
-* C4 - Build Tools and Single Page Web Apps
-* C5 - Capstone
+This may not sound like a lot, but there are a fair amount of moving pieces that rely on each other to work. You’ll need to plan out the logic of what you are trying to accomplish before you begin developing. If you find this process to be quick, there’s a list of additional functionality that you can add that all strive to improve the users’ experience.
 
-## Style-Guide
+## Learnings
 
-See below for the Udacity Style Guide used thoroughout the Front End Nanodegree.
+The landing page presents the first opportunity to fully combine your skills in HTML, CSS, and JavaScript into a large project. Aside from solidifying your skills with these three technologies, you’ll discover how best to combine them in a complex application.
 
-* [Nanodegree Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/)
+The following are just some of the questions that you’ll experience along the way:
+
+* What’s the ideal workflow?
+* How many files do I need?
+* Do I modify the HTML first or the CSS?
+* How many JavaScript functions do I need?
+* Should my function be this many lines of code?
+* Is readability or performance more important?
+
+There’s no single correct answer to each question. While building this project, working with peers, and getting feedback from the project reviewer -- you will naturally develop your own answers to these questions!
+
+[(Back to the Top)](#project-summary)
