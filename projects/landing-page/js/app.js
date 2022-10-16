@@ -27,6 +27,8 @@ const resizingTimeoutInMs = 100;
 const page_top = document.getElementById("absolute_top");
 const header = document.getElementById("header");
 
+let navBarHeight = 0;
+
 /**
  * End Global Variables
  * Start Helper Functions
@@ -40,22 +42,26 @@ function getLineHeightOfParagraph() {
 }
 
 function onEndScrolling() {
-  header.classList.remove('hide');
-  header.classList.add('show');
-  console.log("End of scrolling");
+  // Hide the header
+  header.style.top = 0;
 }
 
 function onEndResizing() {
+  // Refresh the height of the text blocks
   let text_blocks = document.getElementsByClassName("section-text");
-
   for (let text_block of text_blocks) {
     if (text_block.classList.contains("show")) {
+      // scrollHeight instead of offsetHeight because the not-visible part needs to be included
       text_block.style.maxHeight = text_block.scrollHeight + getLineHeightOfParagraph() + 'px';
     } else {
       text_block.style.maxHeight = 0;
     }
     text_block.style.overflow = 'hidden';
   }
+
+  // Update the height of the nav bar for hidding / showing purposes
+  navBarHeight = navBarList.offsetHeight;
+  //console.log(navBarHeight);
 }
 
 /**
@@ -96,7 +102,7 @@ for (let section of sections) {
   newNavElement.addEventListener('click', function() {
     section.scrollIntoView({
       behavior: "smooth",
-      block: "center",
+      block: "start",
       inline: "nearest"
     });
   });
@@ -106,7 +112,7 @@ for (let section of sections) {
 }
 
 navBarList.appendChild(navBarListContainer);
-
+navBarHeight = navBarList.offsetHeight;
 
 // Scroll Listening
 // Add class 'active' to section when near top of viewport
@@ -119,8 +125,7 @@ document.addEventListener('scroll', function() {
   endScrollingTimer = setTimeout(onEndScrolling, scrollingTimeoutInMs);
 
   // Hide the header
-  header.classList.remove('show');
-  header.classList.add('hide');
+  header.style.top = -navBarHeight;
 
   // Finding the Closest section
   let closerSection = page_top;
@@ -167,6 +172,7 @@ for (let i = 0; i < text_blocks.length; ++i) {
 
     if (text_blocks[i].classList.contains("show")) {
       collapse_labels[i].textContent = "[-]";
+      // scrollHeight instead of offsetHeight because the not-visible part needs to be included
       text_blocks[i].style.maxHeight = text_blocks[i].scrollHeight + getLineHeightOfParagraph() + 'px';
     } else {
       collapse_labels[i].textContent = "[+]";

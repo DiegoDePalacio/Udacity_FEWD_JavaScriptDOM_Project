@@ -21,16 +21,6 @@
   padding: 15px;
 }
 
-.page__header.show {
-  transition: 1s;
-  top: 0;
-}
-
-.page__header.hide {
-  transition: 1s;
-  top: -50px;
-}
-
 .section-text {
   transition: 1s;
 }
@@ -130,6 +120,7 @@ section {
   background: #fff;
   width: 100%;
   z-index: 5;
+  transition: 1s;
 }
 
 /* Footer Styles */
