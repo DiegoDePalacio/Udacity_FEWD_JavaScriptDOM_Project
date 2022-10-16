@@ -8,7 +8,7 @@ Project created as part of the Nanodegree by Diego de Palacio
 * [Functionality](#functionality)
 * [Learnings](#learnings)
 
-## Project
+## Project Summary
 
 This project aims to give you real-world scenarios of manipulating the DOM. The functionality you will be using serves two purposes: to prepare you for appending dynamically added data to the DOM, and to show you how javascript can improve the usability of an otherwise static site. This project barely touches the surface of what is possible, but it does use some incredibly common events, methods, and logic.
 
@@ -37,4 +37,4 @@ The following are just some of the questions that you’ll experience along the 
 
 There’s no single correct answer to each question. While building this project, working with peers, and getting feedback from the project reviewer -- you will naturally develop your own answers to these questions!
 
-[(Back to the Top)](#project-summary)
+[(Back to the Top)](#table-of-content)
